@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+  {
+	  int guess,magic;
+	  int chances;
+	  magic=rand()%1000+1;
+	  printf("enter the magic number of 1-1000\n:");
+	  for(chances=1;chances<=10;chances++)
+	  {
+		  printf(" chance  %d enter ur guess :\n",chances);
+		  scanf("%d",&guess);
+		  if(guess==magic)
+		  {
+			  printf("Congrats! You won.\n");
+            return 0;
+        }
+        else if(guess < magic)
+        {
+            printf("left\n");
+        }
+        else
+        {
+            printf("right\n");
+        }
+    }
+
+    printf("Sorry! You have used all 10 chances.\n");
+    printf("The magic number was %d\n", magic);
+return 0;
+  }
+
+
